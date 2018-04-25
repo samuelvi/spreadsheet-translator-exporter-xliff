@@ -1,0 +1,23 @@
+{
+    "name": "atico/spreadsheet-translator-exporter-xliff",
+    "license": "MIT",
+    "type": "library",
+    "description": "Spreadsheet Translator - Library to export translation files into Xliff file format",
+    "keywords": ["library to export translation files into xliff file format"],
+    "autoload": {
+        "psr-4": {
+            "Atico\\SpreadsheetTranslator\\Exporter\\Xliff\\": "./src"
+        }
+    },
+    "repositories": [{
+        "type": "path",
+        "url": "../../Core",
+        "options": {
+            "symlink": true
+        }
+    }],
+    "require": {
+        "atico/spreadsheet-translator-core": "^1.0",
+        "php": ">=5.5.9"
+    }
+}

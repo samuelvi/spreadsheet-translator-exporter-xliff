@@ -1,0 +1,48 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bbf5b83e6b24ef914c685ea765026b17",
+    "packages": [
+        {
+            "name": "atico/spreadsheet-translator-core",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../Core",
+                "reference": "c69a500e130ee1921f9b1271222bc5cb856b9f14",
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Atico\\SpreadsheetTranslator\\Core\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Spreadsheet Translator - Core Module",
+            "transport-options": {
+                "symlink": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "atico/spreadsheet-translator-core": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.9"
+    },
+    "platform-dev": []
+}
