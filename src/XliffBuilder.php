@@ -11,6 +11,8 @@
 
 namespace Atico\SpreadsheetTranslator\Exporter\Xliff;
 
+use Atico\SpreadsheetTranslator\Core\Util\Localization;
+
 class XliffBuilder
 {
     private $data;
@@ -31,8 +33,8 @@ class XliffBuilder
         return sprintf(
             '%s<file source-language="%s" target-language="%s" datatype="plaintext" original="file.ext">',
             str_pad(' ', 4),
-            $this->defaultLocale,
-            $this->locale
+            Localization::getLanguageFromLocale($this->defaultLocale),
+            Localization::getLanguageFromLocale($this->locale)
         );
     }
 
