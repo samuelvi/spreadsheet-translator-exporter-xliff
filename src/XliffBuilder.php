@@ -29,7 +29,7 @@ class XliffBuilder
     protected function buildFile()
     {
         return sprintf(
-            '%s<file source-language="en" target-language="en" datatype="plaintext" original="file.ext">',
+            '%s<file source-language="%s" target-language="%s" datatype="plaintext" original="file.ext">',
             str_pad(' ', 4),
             $this->defaultLocale,
             $this->locale
