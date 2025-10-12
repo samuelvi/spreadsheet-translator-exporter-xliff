@@ -1,5 +1,5 @@
 {
-    "name": "atico/spreadsheet-translator-exporter-xliff",
+    "name": "samuelvi/spreadsheet-translator-exporter-xliff",
     "license": "MIT",
     "type": "library",
     "description": "Spreadsheet Translator - Library to export translation files into Xliff file format",
