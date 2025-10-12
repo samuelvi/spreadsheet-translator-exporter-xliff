@@ -22,12 +22,12 @@ class Xliff extends AbstractExporter implements ExporterInterface
         $this->configuration = new XliffExporterConfigurationManager($configuration);
     }
 
-    public function getFormat()
+    public function getFormat(): string
     {
         return 'xliff';
     }
 
-    protected function buildContent(ExportContentInterface $exportContent)
+    protected function buildContent(ExportContentInterface $exportContent): string
     {
         $xliffBuilder = new XliffBuilder(
             $exportContent->getTranslations(),

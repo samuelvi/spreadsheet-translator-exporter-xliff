@@ -15,20 +15,11 @@ use Atico\SpreadsheetTranslator\Core\Util\Localization;
 
 class XliffBuilder
 {
-    private $data;
-    private $destinationFile;
-    private $locale;
-    private $defaultLocale;
-
-    function __construct($data, $destinationFile, $locale, $defaultLocale)
+    function __construct(private $data, private $destinationFile, private $locale, private $defaultLocale)
     {
-        $this->data = $data;
-        $this->destinationFile = $destinationFile;
-        $this->locale = $locale;
-        $this->defaultLocale = $defaultLocale;
     }
 
-    protected function buildFile()
+    protected function buildFile(): string
     {
         return sprintf(
             '%s<file source-language="%s" target-language="%s" datatype="plaintext" original="file.ext">',
@@ -38,26 +29,26 @@ class XliffBuilder
         );
     }
 
-    protected function buildBody()
+    protected function buildBody(): string
     {
         return sprintf('%s<body>', str_pad(' ', 8));
     }
 
-    protected function buildTrans()
+    protected function buildTrans(): string
     {
-        $rows = array();
+        $rows = [];
         foreach ($this->data as $key => $value) {
             $rows[] = sprintf('%s<trans-unit id="%s">', str_pad(' ', 12), $key);
             $rows[] = sprintf('%s<source>%s</source>', str_pad(' ', 16), $key);
             $rows[] = sprintf('%s<target><![CDATA[%s]]></target>', str_pad(' ', 16), $value);
             $rows[] = sprintf('%s</trans-unit>', str_pad(' ', 12));
         }
-        return join(PHP_EOL, $rows);
+        return implode(PHP_EOL, $rows);
     }
 
-    function buildDocument()
+    function buildDocument(): string
     {
-        $rows = array();
+        $rows = [];
         $rows[] = '<?xml version="1.0"?>';
         $rows[] = sprintf('<!-- %s -->', $this->destinationFile);
         $rows[] = '<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">';
@@ -68,6 +59,6 @@ class XliffBuilder
         $rows[] = sprintf('%s</file>', str_pad(' ', 4));
         $rows[] = '</xliff>';
 
-        return join(PHP_EOL, $rows);
+        return implode(PHP_EOL, $rows);
     }
 }
