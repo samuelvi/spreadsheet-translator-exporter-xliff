@@ -15,7 +15,7 @@ use Atico\SpreadsheetTranslator\Core\Exporter\ExporterConfigurationManager;
 
 class XliffExporterConfigurationManager extends ExporterConfigurationManager implements XliffExporterConfigurationInterface
 {
-    public function getDefaultLocale()
+    public function getDefaultLocale(): string
     {
         return $this->getNonRequiredOption('default_locale', '');
     }

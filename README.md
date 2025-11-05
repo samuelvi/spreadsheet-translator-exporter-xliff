@@ -1,7 +1,10 @@
 Spreadsheet Translator Xliff Exporter
 ========================
 
-Exports a given translation structure into xliff translation file format
+![CI](https://github.com/samuelvi/spreadsheet-translator-exporter-xliff/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/samuelvi/spreadsheet-translator-exporter-xliff/branch/master/graph/badge.svg)](https://codecov.io/gh/samuelvi/spreadsheet-translator-exporter-xliff)
+
+Exports a given translation structure into xliff translation file format.
 
 Related
 ------------
@@ -13,7 +16,67 @@ Related
 Requirements
 ------------
 
-  * PHP >=8.1
+  * PHP >= 8.4
+  * Composer 2.x
+
+
+Installation
+------------
+
+```bash
+composer require samuelvi/spreadsheet-translator-exporter-xliff
+```
+
+
+Development
+-----------
+
+### Setup
+
+```bash
+# Install dependencies
+make install
+
+# or
+composer install
+```
+
+### Code Quality
+
+This project uses Rector to maintain code quality and modern PHP standards.
+
+```bash
+# Check code quality (dry-run)
+make rector-dry-run
+
+# Apply code quality fixes
+make rector
+```
+
+### Testing
+
+The project includes comprehensive unit tests using PHPUnit 11.0.
+
+```bash
+# Run tests
+make test
+
+# or
+vendor/bin/phpunit
+
+# Run tests with coverage
+vendor/bin/phpunit --coverage-html coverage
+```
+
+
+Features
+--------
+
+- **PHP 8.4 Ready**: Fully compatible with the latest PHP version
+- **Type Safety**: Full type declarations for better IDE support and runtime safety
+- **Modern Standards**: Code quality maintained with Rector
+- **Well Tested**: Comprehensive unit test coverage
+- **CI/CD**: Automated testing via GitHub Actions
 
 
 Contributing
@@ -25,7 +88,8 @@ If you'd like to contribute code but aren't sure what, the issues list is a good
 
 All contributors (whether contributing code, involved in issue discussions, or involved in any other way) must abide by our code of conduct.
 
+
 License
 -------
 
-Spreadsheet Translator Symfony Bundle is licensed under the MIT License. See the LICENSE file for full details.
+Spreadsheet Translator Xliff Exporter is licensed under the MIT License. See the LICENSE file for full details.

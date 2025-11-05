@@ -15,5 +15,5 @@ use Atico\SpreadsheetTranslator\Core\Exporter\ExporterConfigurationInterface;
 
 interface XliffExporterConfigurationInterface extends ExporterConfigurationInterface
 {
-    public function getDefaultLocale();
+    public function getDefaultLocale(): string;
 }
